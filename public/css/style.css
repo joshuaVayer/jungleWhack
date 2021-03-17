@@ -1,0 +1,23 @@
+html,body {
+    margin: 0;
+    max-height: 100vh;
+    width: 100%;
+  }
+  main{
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+  }
+  .structure {
+    width: 100%;
+    max-height: 100vh;
+  }
+  .structure-element {
+    width: 100%;
+    position: absolute;
+  }
+  .structure-element img {
+    width: 100%;
+    max-height: 100vh;
+  }
+  
