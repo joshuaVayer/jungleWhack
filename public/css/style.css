@@ -1,23 +1,125 @@
-html,body {
-    margin: 0;
-    max-height: 100vh;
-    width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap");
+@keyframes peep {
+  0% {
+    transform: rotateX(90deg);
   }
-  main{
-      width: 100vw;
-      display: flex;
-      justify-content: center;
+  100% {
+    transform: rotateX(0deg);
   }
-  .structure {
-    width: 100%;
-    max-height: 100vh;
-  }
-  .structure-element {
-    width: 100%;
-    position: absolute;
-  }
-  .structure-element img {
-    width: 100%;
-    max-height: 100vh;
-  }
-  
+}
+html, body {
+  margin: 0;
+  max-height: 100vh;
+  width: 100%;
+  font-family: "Gravitas One", cursive;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.structure {
+  width: 100%;
+  height: 100vh;
+}
+.structure-element {
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  height: 100vh;
+}
+.structure-element img {
+  width: 100%;
+  height: 100vh;
+}
+
+.panel {
+  position: fixed;
+  top: 1vh;
+  right: 1vh;
+  z-index: 1000;
+  transform: rotate(5deg);
+  height: 20vh;
+  width: auto;
+}
+.panel img {
+  width: auto;
+  height: 100%;
+}
+.panel .score {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 6.3vh;
+  font-size: 4.5vh;
+  text-shadow: 0px 1px 1px #1c530e;
+  color: #5f4e1e;
+}
+
+.monkeys {
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+}
+.monkeys .monkey {
+  flex: 1;
+}
+.monkeys .monkey img {
+  width: auto;
+  height: 20vh;
+  display: none;
+  transform-origin: 0%;
+  animation: 0.2s ease-in peep;
+}
+.monkeys .active img {
+  display: block;
+}
+
+.top-monkeys {
+  position: absolute;
+  top: 1vh;
+}
+.top-monkeys .monkey img {
+  transform-origin: 100%;
+}
+
+.bottom-monkeys {
+  bottom: 20vh;
+}
+
+.start-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0f2c0793;
+  z-index: 1001;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.start-wrapper h1 {
+  font-size: 4em;
+  margin: 1em;
+}
+.start-wrapper button {
+  border: none;
+  background: none;
+}
+.start-wrapper svg {
+  background-color: transparent;
+}
+.start-wrapper img {
+  height: 40%;
+}
+
+.playing {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
