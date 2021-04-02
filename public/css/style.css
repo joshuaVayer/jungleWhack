@@ -74,9 +74,6 @@ main {
   transform-origin: 0%;
   animation: 0.2s ease-in peep;
 }
-.monkeys .active img {
-  display: block;
-}
 
 .top-monkeys {
   position: absolute;

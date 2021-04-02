@@ -1,4 +1,4 @@
-const monkeys = document.querySelectorAll('.monkey');
+const monkeys = document.querySelectorAll('.monkey img');
 const scoreBoard = document.querySelector('.score');
 const start = document.querySelector('.start');
 const wrapper = document.querySelector('.start-wrapper');
@@ -31,15 +31,15 @@ const randomMonkey = (monkey) => {
 const peep = () => {
     const time = randomTime(500, 1500);
     const monkey = randomMonkey(monkeys);
-    monkey.classList.add('active');
+    monkey.style.display = 'block';
     setTimeout(() => {
-        monkey.classList.remove('active');
+        monkey.style.display = 'none';
         (!timeUp) ? peep() : wrapper.classList.remove('playing');
     }, time);
 }
 monkeys.forEach(monkey => monkey.addEventListener('click', 
     bonk = () => {
-    monkey.classList.remove('active');
+    monkey.style.display = 'none';
     score++;
     scoreBoard.textContent = score; 
     } 
