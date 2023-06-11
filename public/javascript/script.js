@@ -37,11 +37,11 @@ const peep = () => {
         (!timeUp) ? peep() : wrapper.classList.remove('playing');
     }, time);
 }
-monkeys.forEach(monkey => monkey.addEventListener('click', 
+monkeys.forEach(monkey => monkey.addEventListener('click',
     bonk = () => {
     monkey.style.display = 'none';
     score++;
-    scoreBoard.textContent = score; 
-    } 
+    scoreBoard.textContent = score;
+    }
 ));
 
